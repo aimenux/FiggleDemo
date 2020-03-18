@@ -20,9 +20,13 @@ namespace App
                 .OfType<FiggleFont>()
                 .ToList();
 
+            const string path = "Figgle.txt";
+            const string message = "Hello Figgle";
+
             foreach (var font in fonts)
             {
-                font.WriteLine("Hello World!");
+                font.WriteLine(message);
+                font.WriteLine(path, message);
             }
 
             ConsoleColor.Yellow.WriteLine("Press any key to exit !");
